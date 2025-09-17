@@ -125,12 +125,7 @@ public class DLList<E> {
     }
 
 
-    public void combine(DLList<E> list) {
-// logic for combination of 2 lists class
-        if (list.isEmpty()) {
-
-        }
-
+    public void combine(DLList<E> comlist) {
 
     }
 
