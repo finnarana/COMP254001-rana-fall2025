@@ -8,13 +8,18 @@ public class Main1 {
         DLList<String> L = new DLList<>();
         DLList<String> M = new DLList<>();
 
+
         L.addFirst("R");
         L.addLast("A");
-        L.plist();
+//        L.plist();
 
         M.addFirst("N");
         M.addLast("A");
-        M.plist();
+        //M.plist();
+
+        L.combine(M);
+
+        L.plist();
 
 
     }
