@@ -1,7 +1,7 @@
 package fatimahrana_COMP254Lab1_Ex3;
 
 
-public class Main2 {
+public class Main3 {
 
     //main method
     public static void main(String[] args)  {

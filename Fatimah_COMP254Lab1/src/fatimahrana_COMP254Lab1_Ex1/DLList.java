@@ -1,5 +1,5 @@
-package fatimahrana_COMP254Lab1_Ex1;//in this class I will create my node class, 2 doubly linked lists, and the method to combine the two lists.
-//there will be a separate main class (Main1.java) to run the output.
+package fatimahrana_COMP254Lab1_Ex1;
+//in this class I will create my node class, 2 doubly linked lists, and the method to combine the two lists. there will be a separate main class (Main1.java) to run the output.
 //All code written by Fatimah Mohammed Rana for COMP254 Lab01
 
 public class DLList<E> {
