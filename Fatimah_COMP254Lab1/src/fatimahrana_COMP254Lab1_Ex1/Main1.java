@@ -14,12 +14,13 @@ public class Main1 {
 //        L.plist();
 
         M.addFirst("N");
-        M.addLast("A");
+        M.addLast("A" );
         //M.plist();
 
         L.combine(M);
 
         L.plist();
+        //M.plist();
 
 
     }

@@ -1,11 +1,11 @@
 package fatimahrana_COMP254Lab1_Ex1;
 //in this class I will create my node class, 2 doubly linked lists, and the method to combine the two lists. there will be a separate main class (Main1.java) to run the output.
-//All code written by Fatimah Mohammed Rana for COMP254 Lab01
+//code written by Fatimah Mohammed Rana for COMP254 Lab01
 
 public class DLList<E> {
 
     private static class Node<E> { //node class
-        private E element;
+        private final E element;
         private Node<E> next;
         private Node<E> pre;
 
@@ -14,30 +14,25 @@ public class DLList<E> {
             next = n;
             pre = p;
         }
-
         public E getElement() {
             return element;
         }
-
         public Node<E> getNext() {
             return next;
         }
-
         public void setNext(Node<E> n) {
             next = n;
         }
-
         public Node<E> getPre() {
             return pre;
         }
-
         public void setPre(Node<E> n) {
             pre = n;
         }
     } //end node class
 
-    private Node<E> header;
-    private Node<E> trailer;
+    private final Node<E> header;
+    private final Node<E> trailer;
     private int size = 0;
 
     public DLList() {
@@ -46,17 +41,13 @@ public class DLList<E> {
         trailer = new Node<>(null, null, null);
         header.setNext(trailer);
         trailer.setPre(header);
-
     }
-
     public int getSize() {
         return size;
     }
-
     public boolean isEmpty() {
         return size == 0;
     }
-
     public E first() {
         if (isEmpty()) {
             return null;
@@ -110,23 +101,35 @@ public class DLList<E> {
 
         return node.getElement();
     }
-
-
     public void plist() {
-        System.out.println("list: ");
+        System.out.println("my list: ");
         Node<E> begin = header.getNext();
 
         while (begin != trailer) {
-            System.out.println(begin.getElement() + " ");
-
+            System.out.print(begin.getElement());
+            //System.out.println(begin.getElement()); lines
             begin = begin.getNext();
         }
         System.out.println();
     }
-
-
     public void combine(DLList<E> comlist) {
+        if (comlist.isEmpty())
+            return;
 
+        //hint - Connect the end of L into the beginning of M: going to try finding the ends of each node and directing them to each other
+        Node<E> beginM = comlist.header.getNext();
+        Node<E> endOfL = comlist.trailer.getPre();
+
+        this.trailer.getPre().setNext(beginM);
+        beginM.setPre(this.trailer.getPre());
+
+        endOfL.setNext(this.trailer);
+        this.trailer.setPre(endOfL);
+
+        this.size = comlist.size;
+
+        comlist.header.setNext(comlist.trailer);
+        comlist.trailer.setPre(comlist.header);
+        comlist.size = 0;
     }
-
 } //end ex1

@@ -1,4 +1,6 @@
 package fatimahrana_COMP254Lab1_Ex3;
+//in this class I will create my node class, a circly linked list, and the method to clone the list. there will be a separate main class (Main3.java) to run the output.
+//code (excluding textbook code) written by Fatimah Mohammed Rana for COMP254 Lab01
 
 public class CircleLL<E> {
 
@@ -84,11 +86,11 @@ public class CircleLL<E> {
         return head.getElement();
     }
 
-    //creating clone method
+    //creating clone method - based on singly linked clone. instead of going from head to null, traversing from head until i reach head again
     public CircleLL<E> clone() {
         CircleLL<E> cloned = new CircleLL<>();
 
-        if (size>0) {
+        if (size>0) { //even if there are no values i can still get an output which is cool
             Node<E> head = tail.getNext();
             Node<E> cloneH = new Node<>(head.getElement(), null);
             cloned.tail = cloneH;

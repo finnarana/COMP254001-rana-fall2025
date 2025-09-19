@@ -7,6 +7,7 @@ public class Main3 {
     public static void main(String[] args)  {
         //(LAX, MSP, ATL, BOS)
         CircleLL<String> circularList = new CircleLL<String>();
+
         circularList.addFirst("LAX");
         circularList.addLast("MSP");
         circularList.addLast("ATL");
@@ -14,7 +15,7 @@ public class Main3 {
 
         CircleLL<String> cloneCircleList = circularList.clone();
 
-        //x.clone().equals(x)
+        //x.clone().equals(x)3
         System.out.println("Circular List -- " + circularList);
         System.out.println("Cloned List -- " + cloneCircleList);
 
