@@ -69,11 +69,12 @@ class Exercises {
   /** Returns the sum of the prefix sums of given array. */
   public static int example4(int[] arr) {
     int n = arr.length, prefix = 0, total = 0; //3 tasks are executed here. n=array length (1) prefix =0 (1) and total = 0 (1)
-    for (int j=0; j < n; j++) {     // sets j to 0 and checks if j is less than n prior to executing loop. comparison is done n number of times until j>n (n+1)
-      prefix += arr[j];
+    for (int j=0; j < n; j++) {     // sets j to 0 and checks if j is less than n prior to executing loop. comparison is done n number of times until j>n (n+1). then  j++ increments n number of times
+      prefix += arr[j]; //adds array elemnts to prefix (n)
       total += prefix;
     }
-    return total;
+    return total; //returns final value (1)
+      //final ans: 1+1+1+1+n+1+n+2n+1 = 6+4n. time complexity = O(n)
   }
 
   //e)
