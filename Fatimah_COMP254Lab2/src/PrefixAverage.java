@@ -65,8 +65,7 @@ class PrefixAverage {
         System.out.println("Testing prefixAverage2...");
         for (int t = 0; t < trials; t++) {
             double[] x = new double[n];
-            for (int i = 0; i < n; i++)
-                x[i] = 1.0;
+            for (int i = 0; i < n; i++) x[i] = 1.0;
             long startTime = System.currentTimeMillis();
             double[] result = prefixAverage2(x);
             long endTime = System.currentTimeMillis();
@@ -80,8 +79,7 @@ class PrefixAverage {
         n = start;
         for (int t = 0; t < trials; t++) {
             double[] x = new double[n];
-            for (int i = 0; i < n; i++)
-                x[i] = 1.0;
+            for (int i = 0; i < n; i++) x[i] = 1.0;
             long startTime = System.currentTimeMillis();
             double[] result = prefixAverage1(x);
             long endTime = System.currentTimeMillis();
