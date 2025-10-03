@@ -54,5 +54,42 @@ class PrefixAverage {
     }
     return a;
   }
+    public static void main(String[] args) {
+        int n = 5000;                       // starting value
+        int trials = 10;
+        try { if (args.length > 0) trials = Integer.parseInt(args[0]);
+            if (args.length > 1) n = Integer.parseInt(args[1]);
+        } catch (NumberFormatException e) {}
+        int start = n;
 
+        System.out.println("Testing prefixAverage2...");
+        for (int t = 0; t < trials; t++) {
+            double[] x = new double[n];
+            for (int i = 0; i < n; i++)
+                x[i] = 1.0;
+            long startTime = System.currentTimeMillis();
+            double[] result = prefixAverage2(x);
+            long endTime = System.currentTimeMillis();
+            long elapsed = endTime - startTime;
+
+            System.out.println(String.format("n: %9d took %12d milliseconds", n, elapsed));
+            n *= 2;
+        }
+
+        System.out.println("Testing prefixAverage1...");
+        n = start;
+        for (int t = 0; t < trials; t++) {
+            double[] x = new double[n];
+            for (int i = 0; i < n; i++)
+                x[i] = 1.0;
+            long startTime = System.currentTimeMillis();
+            double[] result = prefixAverage1(x);
+            long endTime = System.currentTimeMillis();
+            long elapsed = endTime - startTime;
+
+            System.out.println(String.format("n: %9d took %12d milliseconds", n, elapsed));
+            n *= 2;
+        }
+
+    }
 }
