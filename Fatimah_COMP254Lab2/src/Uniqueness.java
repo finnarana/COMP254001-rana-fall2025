@@ -32,6 +32,8 @@ import java.util.Arrays;
  */
 class Uniqueness {
 
+    //perform a binary search to determine the largest value of n such that the given algorithm runs in one minute or less.
+
   /** Returns true if there are no duplicate elements in the array. */
   public static boolean unique1(int[] data) {
     int n = data.length;
@@ -52,5 +54,21 @@ class Uniqueness {
         return false;                      // found duplicate pair
     return true;                           // if we reach this, elements are unique
   }
+  //binary search through unique 1 and 2
+    long start = System.currentTimeMillis();
+    long end = System.currentTimeMillis();
+    double duration = end;
+    int low = 0;
+    int high = 61;
+    int mid = low + (high - low) / 2;
+
+    if end <= 60 {
+        end = mid;
+        low = mid + 1;
+        else {
+            high = mid - 1;
+        }
+    }
+
 
 }
