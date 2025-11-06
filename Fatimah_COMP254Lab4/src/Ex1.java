@@ -69,7 +69,6 @@ class LinkedPositionalList<E> implements PositionalList<E> {
     }
 }
 
-// simplified PositionalList interface
 interface PositionalList<E> {
     int size();
     boolean isEmpty();
@@ -78,10 +77,8 @@ interface PositionalList<E> {
     Position<E> after(Position<E> p);
     Position<E> addLast(E e);
 }
-
-// answer for Example 1
+//my solution
 public class Ex1 {
-    // utility method to get index of a position
     public static <E> int indexOfP(PositionalList<E> list, Position<E> p) {
         int index = 0;
         for (Position<E> walk = list.first(); walk != null; walk = list.after(walk)) {

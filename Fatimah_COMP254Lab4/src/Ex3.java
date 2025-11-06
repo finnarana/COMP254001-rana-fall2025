@@ -34,7 +34,6 @@ public class Ex3 {
             return value;
         }
 
-        // O(1) concatenation
         public void concatenate(SinglyLinkedList<E> other) {
             if (other.isEmpty()) return;
             if (this.isEmpty()) {
