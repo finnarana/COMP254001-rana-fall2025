@@ -58,7 +58,7 @@ class LinkedStack<E> implements Stack<E> {
 //my solution for transfer method
 public class Ex2 {
 
-    // transfers from S to T
+    // from S to T
     public static <E> void transfer(Stack<E> S, Stack<E> T) {
         while (!S.isEmpty()) {
             T.push(S.pop());
