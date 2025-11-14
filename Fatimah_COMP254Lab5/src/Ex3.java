@@ -18,7 +18,6 @@ public class Ex3 {
         protected ArrayList<Entry<K,V>> heap = new ArrayList<>();
         protected Comparator<K> comp;
         public HeapPriorityQueue() {
-            // use natural ordering if no comparator given
             this((k1, k2) -> ((Comparable<K>) k1).compareTo(k2));
         }
         public HeapPriorityQueue(Comparator<K> comp) { this.comp = comp; }
