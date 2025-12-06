@@ -21,6 +21,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+
 /**
  * Interface for a queue: a collection of elements that are inserted
  * and removed according to the first-in first-out principle. Although

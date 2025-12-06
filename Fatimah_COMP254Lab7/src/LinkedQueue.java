@@ -21,6 +21,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+
 /**
  * Realization of a FIFO queue as an adaptation of a SinglyLinkedList.
  * All operations are performed in constant time.
