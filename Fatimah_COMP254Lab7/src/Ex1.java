@@ -1,4 +1,4 @@
-//COMP254 Lab07 | Code modified by Fatimah Rana 301342519
+//COMP254 Lab07 Ex1| Code modified by Fatimah Rana 301342519
 import java.util.ArrayList;
 import java.util.Comparator;
 
