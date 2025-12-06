@@ -38,7 +38,7 @@ public class Ex2 {
 
         System.out.print("after sort: ");
         while (!sorted.isEmpty())
-            System.out.print(sorted.dequeue() + " ");
+            System.out.print(sorted.dequeue() +" ");
         System.out.println();
     }
 }

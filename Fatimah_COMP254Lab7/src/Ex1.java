@@ -23,7 +23,7 @@ public class Ex1<K,V> extends AbstractSortedMap<K,V> {
         tree.addRoot(null); // create a sentinel leaf as root
     }
     /**
-     * Returns the number of entries in the map.
+     * Returns the number of entries in the map
      * @return number of entries in the map
      */
     @Override
